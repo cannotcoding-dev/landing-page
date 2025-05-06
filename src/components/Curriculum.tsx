@@ -29,7 +29,7 @@ const Curriculum = () => (
           <tr className="bg-[#181f29] rounded-2xl shadow-xl">
             <td className="p-3 font-bold">2주차</td>
             <td className="p-3">기획력으로 코딩 대체하기</td>
-            <td className="p-3">"이런 웹을 만들어줘" 프롬프트 작성법</td>
+            <td className="p-3">&quot;이런 웹을 만들어줘&quot; 프롬프트 작성법</td>
           </tr>
           <tr className="bg-[#181f29] rounded-2xl shadow-xl">
             <td className="p-3 font-bold">3주차</td>
