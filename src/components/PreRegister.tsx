@@ -2,6 +2,15 @@
 
 import React, { useEffect, useRef } from "react";
 
+// Tally 타입 선언 추가
+declare global {
+  interface Window {
+    Tally?: {
+      loadEmbeds: () => void;
+    };
+  }
+}
+
 const TALLY_EMBED_URL =
   "https://tally.so/embed/mepBvk?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&theme=dark";
 
@@ -11,18 +20,17 @@ const PreRegister = () => {
   useEffect(() => {
     // Tally embed script
     const scriptId = "tally-embed-script";
-    const w = window as any;
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
       script.src = "https://tally.so/widgets/embed.js";
       script.async = true;
       script.onload = () => {
-        if (w.Tally) w.Tally.loadEmbeds();
+        if (window.Tally) window.Tally.loadEmbeds();
       };
       document.body.appendChild(script);
     } else {
-      if (w.Tally) w.Tally.loadEmbeds();
+      if (window.Tally) window.Tally.loadEmbeds();
     }
   }, []);
 
