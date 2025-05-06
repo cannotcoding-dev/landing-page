@@ -26,7 +26,12 @@ const HeroSection = () => (
         <li>👉 GPT, Cursor, Notion, Webflow 등 AI 도구를 활용한 실제 개발 경험</li>
         <li>💌 지금 신청하면 얼리버드 혜택과 클래스 소식을 가장 먼저 알려드려요!</li>
       </ul>
-      <button className="bg-[#3be8b0] text-black text-lg px-10 py-4 rounded-full font-semibold shadow-xl hover:bg-[#2bcf9c] transition-all duration-200">
+      <button
+        className="bg-[#3be8b0] text-black text-lg px-10 py-4 rounded-full font-semibold shadow-xl hover:bg-[#2bcf9c] transition-all duration-200"
+        onClick={() => {
+          document.getElementById('pre-register')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
         사전 신청하기
       </button>
     </div>
